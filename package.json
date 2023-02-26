@@ -1,0 +1,32 @@
+{
+  "name": "@vroskus/upload-sourcemaps",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vroskus/upload-sourcemaps.git"
+  },
+  "description": "Tool for uploading project sourcemaps to Sentry",
+  "author": "Vilius Roškus",
+  "keywords": [
+    "sourcemaps",
+    "sentry"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "bin": {
+    "upload-sourcemaps": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo 'No tests yet'"
+  },
+  "dependencies": {
+    "@sentry/cli": "^2.13.0"
+  },
+  "bugs": {
+    "url": "https://github.com/vroskus/upload-sourcemaps/issues"
+  },
+  "homepage": "https://github.com/vroskus/upload-sourcemaps#readme",
+  "main": "bin/index.js"
+}
