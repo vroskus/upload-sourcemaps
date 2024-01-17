@@ -64,7 +64,10 @@ async function createReleaseAndUpload() {
 
     console.log('Uploading source maps');
 
-    const filesPath = path.resolve(__dirname, uploadSourcemapsConfig.filesPath || './dist');
+    const filesPath = path.join(
+      process.cwd(),
+      uploadSourcemapsConfig.filesPath || './dist',
+    )
 
     await cli.releases.uploadSourceMaps(
       version,
