@@ -22,7 +22,7 @@
     "test": "echo 'No tests yet'"
   },
   "dependencies": {
-    "@sentry/cli": "^2.13.0"
+    "@sentry/cli": "^2.25.2"
   },
   "bugs": {
     "url": "https://github.com/vroskus/upload-sourcemaps/issues"
