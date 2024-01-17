@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const fs = require('fs');
+const path = require('path');
 const SentryCli = require('@sentry/cli');
 
 const getPackageJson = () => {
@@ -63,14 +64,14 @@ async function createReleaseAndUpload() {
 
     console.log('Uploading source maps');
 
-    const filesPath = uploadSourcemapsConfig.filesPath || './dist';
+    const filesPath = path.resolve(__dirname, uploadSourcemapsConfig.filesPath || './dist');
 
     await cli.releases.uploadSourceMaps(
       version,
       {
         include: [filesPath],
         rewrite: false,
-        urlPrefix: `~${filesPath}`,
+        urlPrefix: filesPath,
       },
     );
 
