@@ -19,10 +19,11 @@
     "upload-sourcemaps": "bin/index.js"
   },
   "scripts": {
-    "test": "echo 'No tests yet'"
+    "test": "echo 'No tests yet'",
+    "build": "echo 'Nothing to build'"
   },
   "dependencies": {
-    "@sentry/cli": "^2.25.2"
+    "@sentry/cli": "2.28.6"
   },
   "bugs": {
     "url": "https://github.com/vroskus/upload-sourcemaps/issues"
