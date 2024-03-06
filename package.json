@@ -19,11 +19,17 @@
     "upload-sourcemaps": "bin/index.js"
   },
   "scripts": {
-    "test": "echo 'No tests yet'",
+    "test": "npm run test:eslint",
+    "test:eslint": "eslint bin --fix",
     "build": "echo 'Nothing to build'"
   },
   "dependencies": {
-    "@sentry/cli": "2.28.6"
+    "@sentry/cli": "^2.29.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1"
   },
   "bugs": {
     "url": "https://github.com/vroskus/upload-sourcemaps/issues"

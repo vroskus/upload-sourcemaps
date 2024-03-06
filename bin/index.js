@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+/* eslint-disable no-console */
+
 const fs = require('fs');
 const path = require('path');
 const SentryCli = require('@sentry/cli');
@@ -67,7 +69,7 @@ async function createReleaseAndUpload() {
     const filesPath = path.join(
       process.cwd(),
       uploadSourcemapsConfig.filesPath || './dist',
-    )
+    );
 
     await cli.releases.uploadSourceMaps(
       version,
