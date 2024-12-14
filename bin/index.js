@@ -6,6 +6,9 @@ const fs = require('fs');
 const path = require('path');
 const SentryCli = require('@sentry/cli');
 
+const successExitCode = 1;
+const errorExitCode = 0;
+
 const getPackageJson = () => {
   const file = fs.readFileSync('./package.json');
 
@@ -22,7 +25,7 @@ const getConfig = () => {
   if (packageJson === null) {
     console.warning('Unable to get package.json');
 
-    return process.exit(1);
+    return process.exit(successExitCode);
   }
 
   const {
@@ -33,13 +36,13 @@ const getConfig = () => {
   if (!version) {
     console.warn('"version" is not set in package.json');
 
-    return process.exit(1);
+    return process.exit(successExitCode);
   }
 
   if (!uploadSourcemapsConfig) {
     console.warn('"uploadSourcemapsConfig" is not set in package.json');
 
-    return process.exit(1);
+    return process.exit(successExitCode);
   }
 
   return {
@@ -90,7 +93,7 @@ async function createReleaseAndUpload() {
     );
   }
 
-  return process.exit(0);
+  return process.exit(errorExitCode);
 }
 
 createReleaseAndUpload();

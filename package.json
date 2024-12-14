@@ -27,7 +27,7 @@
     "@sentry/cli": "^2.39.1"
   },
   "devDependencies": {
-    "@vroskus/eslint-config": "^1.0.16"
+    "@vroskus/eslint-config": "^1.0.17"
   },
   "bugs": {
     "url": "https://github.com/vroskus/upload-sourcemaps/issues"
