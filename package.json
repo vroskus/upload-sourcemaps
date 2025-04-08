@@ -24,7 +24,7 @@
     "build": "echo 'Nothing to build'"
   },
   "dependencies": {
-    "@sentry/cli": "^2.39.1"
+    "@sentry/cli": "^2.43.0"
   },
   "devDependencies": {
     "@vroskus/eslint-config": "^1.0.23"
