@@ -24,10 +24,10 @@
     "build": "echo 'Nothing to build'"
   },
   "dependencies": {
-    "@sentry/cli": "^2.58.2"
+    "@sentry/cli": "^3.0.1"
   },
   "devDependencies": {
-    "@vroskus/eslint-config": "^1.0.26"
+    "@vroskus/eslint-config": "^1.0.30"
   },
   "bugs": {
     "url": "https://github.com/vroskus/upload-sourcemaps/issues"
