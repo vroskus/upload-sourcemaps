@@ -77,7 +77,9 @@ async function createReleaseAndUpload() {
     await cli.releases.uploadSourceMaps(
       version,
       {
-        include: [filesPath],
+        include: [
+          filesPath,
+        ],
         rewrite: false,
         urlPrefix: filesPath,
       },
